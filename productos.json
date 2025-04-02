@@ -1,0 +1,61 @@
+{
+    "lista": [
+        {
+            "id": 1,
+            "name": "Pop Keys",
+            "price": 15000,
+            "img": "imagenes/Producto-uno.jpg",
+            "category": "teclados"
+        },
+        {
+            "id": 2,
+            "name": "K380 Multi-Device",
+            "price": 45000,
+            "img": "imagenes/Producto-dos.jpg",
+            "category": "teclados"
+        },
+        {
+            "id": 3,
+            "name": "Pop Keys QWERTY",
+            "price": 10700,
+            "img": "imagenes/Producto-tres.jpg",
+            "category": "teclados"
+        },
+        {
+            "id": 4,
+            "name": "Zeus X H510 Rgb",
+            "price": 12000,
+            "img": "imagenes/Producto-cuatro.jpg",
+            "category": "auriculares"
+        },
+        {
+            "id": 5,
+            "name": "Ire Wireless H848",
+            "price": 70000,
+            "img": "imagenes/Producto-cinco.jpg",
+            "category": "auriculares"
+        },
+        {
+            "id": 6,
+            "name": "TD500 V2 MESH BLACK",
+            "price": 17500,
+            "img": "imagenes/Producto-seis.jpg",
+            "category": "gabinetes"
+        },
+        {
+            "id": 8,
+            "name": "Pad 6240",
+            "price": 35000,
+            "img": "imagenes/Producto-ocho.jpg",
+            "category": "Pads"
+        },
+        {
+            "id": 9,
+            "name": "Redragon GM300",
+            "price": 58000,
+            "img": "imagenes/Producto-nueve.jpg",
+            "category": "microfonos"
+        }
+        
+    ]
+}

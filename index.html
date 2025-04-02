@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras Vue</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagenes/icon.png" type="image/x-png">
+    
+</head>
+<body>
+    
+    <header>
+        <h1><i class="fas fa-shopping-cart"></i> Carrito de Compras Vue</h1>
+    </header>
+
+    <main>
+        <div id="app">
+            <h2 class="tittle-products">Productos</h2>
+            <div class="product-container">
+                <div v-for="(product, index) in products" :key="index" class="product-box">
+                    <img v-bind:src="product.img" alt="Imagen del producto">
+                    <div class="product-details">
+                        <span><strong>Nombre:</strong> <span v-text="product.name"></span></span>
+                        <span><strong>Precio:</strong> <span class="price" v-text="product.price"></span></span>
+                        <span><strong>Categoría:</strong> <span v-text="product.category"></span></span>
+                    </div>                                                                      
+                    <button v-on:click="addToCart(product)">Agregar al Carrito🛒</button>
+                </div>
+            </div>
+
+            <div class="cart">
+                <h2 class="tittle-carrito">Carrito </h2>
+                <ul>
+                    <li v-for="(item, index) in cart" :key="index">
+                        <img v-bind:src="item.img" alt="Imagen del producto">
+                        <div class="cart-item-details">
+                            <span><strong>Nombre:</strong> <span v-text="item.name"></span></span>
+                            <span><strong>Precio:</strong> <span class="price" v-text="item.price"></span></span>
+                            <span><strong>Categoría:</strong> <span v-text="item.category"></span></span> <!-- Agregar la categoría -->
+                        </div>
+                        <button class="button-delete" @click="removeFromCart(index)">Eliminar</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cart">
+                <h2 class="total-carrito">{{ `Total del Carrito (${cart.length} producto${cart.length !== 1 ? 's' : ''})` }}</h2>
+                <p><strong class="total-precio">Total:</strong> <span v-text="calculateTotal()"></span></p>
+            </div>
+        </div>       
+    </main>
+
+    <footer>
+        <p>DV | Aplicaciones para Dispositivos Móviles</p>
+    </footer>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="carrito.js"></script>
+</body>
+</html>
